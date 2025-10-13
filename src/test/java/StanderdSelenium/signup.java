@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import javax.swing.plaf.TableHeaderUI;
+import java.io.File;
 import java.time.Duration;
 
 public class signup {
@@ -23,7 +24,7 @@ public class signup {
         WebElement password_txt = driver.findElement(By.xpath("//*[@id=\"input-password\"]"));
         WebElement signup_btn = driver.findElement(By.xpath("//*[@id=\"register-form\"]/button"));
 
-        email_txt.sendKeys("rashmi.rightmo54@test.com");
+        email_txt.sendKeys("rashmi.rightmo74@test.com");
         password_txt.sendKeys("123");
         signup_btn.click();
 
@@ -37,7 +38,7 @@ public class signup {
         WebElement urlicon_txt =driver.findElement(By.className("accodianRequired"));
         url_txt.sendKeys("https://www.linkedin.com/in/ras");
 
-//
+
         Thread.sleep(3000);
         WebElement next_btn = driver.findElement(By.xpath("//*[@id=\"temp_next\"]/div"));
         next_btn.click();
@@ -229,21 +230,102 @@ public class signup {
         WebElement createqrcode8_btn = driver.findElement(By.xpath("//*[@id=\"myQrCode\"]/div/section/div[1]/div/div/div[2]/div[2]"));
         createqrcode8_btn.click();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement menu_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='step1']/div/div/div[6]/button")));
+        Thread.sleep(3000);
+        WebElement pdf_btn = driver.findElement(By.xpath("//*[@id=\"step1\"]/div/div/div[2]/button/div/input"));
+        pdf_btn.click();
+        Thread.sleep(3000);
+        File uploadFile = new File("assest/sample1.pdf");
+        WebElement fileInput = driver.findElement(By.className("dz-hidden-input"));
+        fileInput.sendKeys(uploadFile.getAbsolutePath());
+
+        Thread.sleep(3000);
+        WebElement next8_btn = driver.findElement(By.xpath("//*[@id=\"temp_next\"]/div"));
+        next8_btn.click();
+
+        Thread.sleep(3000);
+        WebElement create9_btn = driver.findElement(By.xpath("//*[@id=\"temp_submit\"]/div"));
+        create9_btn.click();
+
+        Thread.sleep(3000);
+        WebElement createqrcode9_btn = driver.findElement(By.xpath("//*[@id=\"myQrCode\"]/div/section/div[1]/div/div/div[2]/div[2]"));
+        createqrcode9_btn.click();
+
+        Thread.sleep(3000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+        Thread.sleep(3000);
+        WebElement menu_btn = driver.findElement(By.xpath("//*[@id=\"step1\"]/div/div/div[6]/button/div/input"));
         menu_btn.click();
 
+        Thread.sleep(3000);
+        WebElement popupmenu_btn = driver.findElement(By.xpath("//*[@id=\"helpCarousel1\"]/div"));
+        WebElement wantcreatemenu_btn = driver.findElement(By.xpath("//*[@id=\"helpCarousel1\"]/div/div/div/div[2]/button[1]"));
+        wantcreatemenu_btn.click();
 
+        Thread.sleep(3000);
+        WebElement section1_txt = driver.findElement(By.xpath("//*[@id=\"sectionNames\"]"));
+        section1_txt.sendKeys("Lunch Menu");
 
-//        Thread.sleep(3000);
-//        WebElement menupopup_btn = driver.findElement(By.xpath("//*[@id=\"helpCarousel1\"]/div"));
-//        WebElement menudigital_btn = driver.findElement(By.xpath("//*[@id=\"helpCarousel1\"]/div/div/div/div[2]/button[1]/div[2]"));
-//        menudigital_btn.click();
+        Thread.sleep(3000);
+        WebElement section2_txt = driver.findElement(By.xpath("//*[@id=\"menu_product_1_1\"]/div/div[2]/div[1]/input"));
+        section2_txt.sendKeys("Dinner Menu");
 
+        Thread.sleep(3000);
+        WebElement next9_btn = driver.findElement(By.xpath("//*[@id=\"temp_next\"]/div"));
+        next9_btn.click();
 
+        Thread.sleep(3000);
+        WebElement create10_btn = driver.findElement(By.xpath("//*[@id=\"temp_submit\"]/div"));
+        create10_btn.click();
 
+        Thread.sleep(3000);
+        WebElement createqrcode10_btn = driver.findElement(By.xpath("//*[@id=\"myQrCode\"]/div/section/div[1]/div/div/div[2]/div[2]"));
+        createqrcode10_btn.click();
 
+        Thread.sleep(3000);
+        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+        js1.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
+        Thread.sleep(3000);
+        WebElement coupon_btn = driver.findElement(By.xpath("//*[@id=\"step1\"]/div/div/div[12]/button/div/input"));
+        coupon_btn.click();
+
+        Thread.sleep(3000);
+        WebElement couponcode_txt = driver.findElement(By.xpath("//*[@id=\"couponCode\"]"));
+        couponcode_txt.sendKeys("123");
+
+        Thread.sleep(3000);
+        WebElement next10_btn = driver.findElement(By.xpath("//*[@id=\"temp_next\"]/div"));
+        next10_btn.click();
+
+        Thread.sleep(3000);
+        WebElement create11_btn = driver.findElement(By.xpath("//*[@id=\"temp_submit\"]/div"));
+        create11_btn.click();
+
+        Thread.sleep(3000);
+        WebElement createqrcode11_btn = driver.findElement(By.xpath("//*[@id=\"myQrCode\"]/div/section/div[1]/div/div/div[2]/div[2]"));
+        createqrcode11_btn.click();
+
+        Thread.sleep(3000);
+        JavascriptExecutor js2 = (JavascriptExecutor) driver;
+        js2.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+        Thread.sleep(3000);
+        WebElement wifi_btn = driver.findElement(By.xpath("//*[@id=\"step1\"]/div/div/div[5]/button/div/input"));
+        wifi_btn.click();
+
+        Thread.sleep(3000);
+        WebElement networkname_txt = driver.findElement(By.xpath("//*[@id=\"wifi_ssid\"]"));
+        networkname_txt.sendKeys("redme");
+
+        Thread.sleep(3000);
+        WebElement next11_btn = driver.findElement(By.xpath("//*[@id=\"temp_next\"]/div"));
+        next11_btn.click();
+
+        Thread.sleep(3000);
+        WebElement create12_btn = driver.findElement(By.xpath("//*[@id=\"temp_submit\"]/div"));
+        create12_btn.click();
 
 
 
